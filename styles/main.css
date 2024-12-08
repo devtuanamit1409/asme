@@ -1,9 +1,10 @@
 /* Reset CSS */
-
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 body {
   background-color: #484848;
   position: relative;
   overflow-x: hidden !important;
+  font-family: "Open Sans", sans-serif;
 }
 
 .banner-home {
@@ -393,20 +394,6 @@ body {
   top: 60%;
   left: 8%;
   z-index: 30;
-  /* clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% 0px,
-    0px 0px,
-    0px 130px,
-    100% 130px,
-    100% 100%,
-    0% 100%,
-    0% 130px,
-    95.1484px 130px,
-    95.1484px 0px,
-    0% 0px
-  ); */
 }
 .box-children-3 {
   width: 210px;
@@ -444,9 +431,47 @@ body {
 .box-overlay-content {
   width: 160px !important;
   height: 160px !important;
-  left: -7% !important;
-  top: 94% !important;
+  left: -25% !important;
+  top: 190% !important;
 }
+.box-chilider-2-content {
+  width: 80px;
+  height: 80px;
+  border: #fff 1px solid;
+  z-index: 100;
+  position: absolute;
+  top: 72%;
+  left: 210px;
+}
+.box-content {
+  top: 76%;
+  left: 7.7%;
+}
+
+.title-content-main {
+  font-size: 60px;
+  font-weight: bold;
+  z-index: 2000;
+  position: absolute;
+  top: 61%;
+  left: 24%;
+}
+
+.img-content img {
+  position: absolute;
+  top: 68%;
+  left: 20%;
+  z-index: 2000;
+}
+.img-luoi img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%; /* Đảm bảo phủ toàn bộ banner-home */
+  z-index: 200; /* Đặt lớp phủ nằm trên các phần tử khác trong banner-home */
+}
+
 @media (max-width: 768px) {
   .banner-content .top-text h1 {
     font-size: 32px;
@@ -501,7 +526,8 @@ body {
   .box-children-2,
   .box-children-3,
   .box-children-4,
-  .box-blue {
+  .box-blue,
+  .img-content img {
     display: none;
   }
 }
@@ -632,7 +658,8 @@ body {
   .box-children-3,
   .box-children-4,
   .box-blue,
-  .img-avt {
+  .img-avt,
+  .box-chilider-2-content {
     display: none !important;
   }
 }

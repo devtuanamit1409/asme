@@ -6,12 +6,10 @@
   font-family: "Open Sans", sans-serif;
 }
 
-/* Logo */
 .logo img {
   max-height: 70px;
 }
 
-/* Link */
 .link a {
   font-family: "Open Sans", sans-serif;
   color: white;
@@ -24,13 +22,12 @@
   color: #00a9ed;
 }
 
-/* List (Menu chính) */
 .list-header ul {
   list-style: none;
   margin: 0;
   padding: 0;
   display: flex;
-  gap: 40px; /* Tăng khoảng cách giữa các mục menu */
+  gap: 40px;
 }
 
 .list-header ul li a {
@@ -44,33 +41,49 @@
 .list-header ul li a:hover {
   color: #00a9ed;
 }
+
 .navbar-toggler-icon {
   display: inline-block;
-  width: 30px; /* Chiều rộng của thanh */
-  height: 3px; /* Độ dày của thanh */
-  background-color: #000; /* Màu thanh */
-  border-radius: 2px; /* Bo góc */
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
   position: relative;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbar-toggler-icon::before,
 .navbar-toggler-icon::after {
   content: "";
-  display: block;
-  width: 30px; /* Chiều rộng của thanh */
-  height: 3px; /* Độ dày của thanh */
-  background-color: #fff; /* Màu thanh */
-  border-radius: 2px; /* Bo góc */
   position: absolute;
+  width: 30px;
+  height: 3px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease-in-out;
   left: 0;
 }
 
 .navbar-toggler-icon::before {
-  top: -8px; /* Khoảng cách thanh trên */
+  top: -8px;
 }
 
 .navbar-toggler-icon::after {
-  top: 8px; /* Khoảng cách thanh dưới */
+  top: 8px;
+}
+
+.navbar-toggler.open .navbar-toggler-icon {
+  background-color: transparent;
+}
+
+.navbar-toggler.open .navbar-toggler-icon::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+.navbar-toggler.open .navbar-toggler-icon::after {
+  transform: rotate(-45deg);
+  top: 0;
 }
 
 @media (max-width: 768px) {

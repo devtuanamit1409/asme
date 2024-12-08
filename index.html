@@ -67,18 +67,15 @@
               <span class="navbar-toggler-icon"></span>
             </button>
 
-            <!-- Phần bên phải -->
             <div
               class="header-right collapse d-lg-flex flex-column align-items-end gap-3"
               id="headerMenu"
             >
-              <!-- Link (Hàng trên) -->
               <div class="link mb-3">
                 <a href="#" class="me-4 text-white">Facebook</a>
                 <a href="#" class="text-white">ASME Foundation</a>
               </div>
 
-              <!-- List (Hàng dưới) -->
               <div class="list-header">
                 <ul class="d-flex">
                   <li><a href="./content.html">We Believe</a></li>
@@ -120,6 +117,8 @@
             >
           </div>
         </div>
+
+        <img class="img-overlay" src="./images/wave.png" alt="" width="100%" />
       </div>
       <div class="main-section">
         <div class="section-million left-animated">
@@ -292,13 +291,11 @@
         const overlayRect = overlay.getBoundingClientRect();
         const childRect = child.getBoundingClientRect();
 
-        // Tính toán vùng giao nhau
         const top = Math.max(overlayRect.top - childRect.top, 0);
         const left = Math.max(overlayRect.left - childRect.left, 0);
         const bottom = Math.max(childRect.bottom - overlayRect.bottom, 0);
         const right = Math.max(childRect.right - overlayRect.right, 0);
 
-        // Áp dụng clip-path giữ phần bên ngoài vùng bị đè
         child.style.clipPath = `polygon(
           0% 0%,
           100% 0%,
@@ -315,13 +312,18 @@
     )`;
       }
 
-      // Lắng nghe sự kiện tải trang và thay đổi kích thước
-
       window.addEventListener("load", cutInsideOverlayArea);
       window.addEventListener("resize", cutInsideOverlayArea);
     </script>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script async src="./js/animated.js"></script>
+    <script>
+      document
+        .querySelector(".navbar-toggler")
+        .addEventListener("click", function () {
+          this.classList.toggle("open");
+        });
+    </script>
   </body>
 </html>

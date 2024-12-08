@@ -96,18 +96,19 @@
     <div class="wrap">
       <div class="banner-home">
         <img class="img-overlay" src="./images/overlay.png" alt="" />
-        <div class="box-chilider-2"></div>
+        <!-- <div class="box-chilider-2-content box-content"></div> -->
         <div class="box-children-3"></div>
         <div class="box-children-4"></div>
-        <img src="./images/banner-home.png" alt="Banner" />
+        <img src="./images/we-belive.png" alt="Banner" />
         <div class="container">
-          <div class="content">
-            <div class="box-overlay box-overlay-content">
-              <div class="overlay-bg"></div>
+          <div class="main-content-main">
+            <div class="img-content">
+              <img src="./images/Group 131.png" alt="" />
             </div>
-            <h1 class="title">We Believe</h1>
           </div>
         </div>
+        <h1 class="title title-content-main">We belive</h1>
+        <img class="img-overlay" src="./images/wave.png" alt="" width="100%" />
       </div>
       <div class="main-section">
         <div class="section-million">
@@ -284,6 +285,13 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
       AOS.init();
+    </script>
+    <script>
+      document
+        .querySelector(".navbar-toggler")
+        .addEventListener("click", function () {
+          this.classList.toggle("open");
+        });
     </script>
   </body>
 </html>
