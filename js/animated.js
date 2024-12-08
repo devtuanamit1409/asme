@@ -21,3 +21,11 @@ ScrollReveal().reveal(".right-animated", {
   easing: "ease-in-out",
   delay: 200,
 });
+
+ScrollReveal().reveal(".top-animated", {
+  duration: 500,
+  distance: "50px",
+  origin: "right",
+  easing: "ease-in-out",
+  delay: 200,
+});
