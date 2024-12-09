@@ -160,11 +160,11 @@ body {
 }
 
 .box-hover img {
-  transition: transform 0.3s ease; /* Hiệu ứng zoom */
+  transition: transform 0.3s ease;
 }
 
 .box-hover:hover img {
-  transform: scale(1.1); /* Phóng to hình ảnh khi hover */
+  transform: scale(1.1);
 }
 
 /* Lớp overlay */
@@ -178,7 +178,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  opacity: 0; /* Mặc định ẩn */
+  opacity: 0;
   transition: opacity 0.3s ease;
   z-index: 1000;
 }
@@ -189,9 +189,13 @@ body {
 
 /* Khung viền bên trong */
 .inner-border {
-  position: relative;
+  position: absolute;
+  top: 50%; /* Move to the vertical center */
+  left: 50%; /* Move to the horizontal center */
+  transform: translate(-50%, -50%);
   width: 85%; /* Kích thước khung nhỏ hơn overlay */
   height: 85%;
+  margin: auto;
   border: 2px solid white; /* Viền trắng */
   display: flex;
   justify-content: center;
@@ -428,6 +432,7 @@ body {
 .main-blue {
   position: relative;
 }
+
 .box-blue {
   height: 100px;
   width: 100px;
@@ -437,6 +442,7 @@ body {
   left: -38px;
   top: 8px;
 }
+
 .box-blue-2 {
   position: absolute;
   z-index: 2000;
@@ -676,13 +682,14 @@ body {
 
 @media (max-width: 1700px) {
   .box-overlay {
-    left: 5% !important;
+    left: 7% !important;
     height: 350px;
     width: 22%;
+    top: 45%;
   }
   .box-children-2 {
     left: 1%;
-    top: 57%;
+    top: 52%;
   }
   .box-children-3 {
     right: 8%;
@@ -877,8 +884,18 @@ body {
 
 @media (max-width: 1500px) {
   .box-overlay {
-    left: 1% !important;
+    left: 4% !important;
+    top: 45%;
   }
+
+  .box-chilren-2 {
+    top: 52%;
+  }
+
+  .box-text {
+    left: 4.9%;
+  }
+
   .title {
     font-size: 50px;
   }
