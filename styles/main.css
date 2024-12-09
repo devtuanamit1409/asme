@@ -24,6 +24,39 @@ body {
   /* height: auto; */
 }
 
+/* Style for scroll-top button */
+.backToTopBtn {
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 1000;
+  height: 50px;
+  width: 50px;
+  font-size: 20px;
+  border: none;
+  color: #cccccc;
+  border-radius: 100%;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.backToTopBtn:not(:hover) {
+  background: #00a9ed;
+}
+.backToTopBtn:hover {
+  background: #484848;
+}
+
+.backToTopBtn.active {
+  visibility: visible;
+  opacity: 1;
+  pointer-events: auto;
+}
+.backToTopBtn:not(.active) {
+  visibility: hidden;
+  opacity: 0;
+  pointer-events: none;
+}
+
 .overlay {
   position: absolute;
   top: 0;
@@ -173,12 +206,16 @@ body {
   text-transform: uppercase;
   text-align: center;
 }
+
 .icon-blue {
   display: inline-block;
   color: #00a9ed;
   font-size: 101px;
-  font-weight: bold;
+  font-family: "Cormorant SC", serif;
+  font-weight: 700;
+  font-style: normal;
   line-height: 1;
+  height: 0px;
 }
 
 .text-title {
@@ -186,12 +223,14 @@ body {
   font-weight: bold;
   color: #fff;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 .detail-content-blue {
   font-size: 16px;
   color: #fff;
   padding: 10px 0;
   font-style: italic;
+  font-weight: light;
 }
 
 .box-content-left {
