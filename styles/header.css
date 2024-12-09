@@ -96,7 +96,7 @@
   top: 0;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 990px) {
   .header .logo img {
     max-height: 50px;
     width: auto;
@@ -104,6 +104,7 @@
 
   .header .header-right {
     width: 100%;
+    padding-top: 20px;
   }
 
   .header .header-right .link {
