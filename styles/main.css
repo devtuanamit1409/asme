@@ -217,15 +217,20 @@ body {
 .vision {
   background-color: #00a9ed !important;
   padding: 60px;
+  position: relative;
+  z-index: 1000;
 }
+
 .vision span {
   font-size: 45px;
   color: #fff;
 }
+
 .vision h2 {
   font-size: 83px;
   color: #fff;
 }
+
 .vision p {
   color: #fff;
 }
