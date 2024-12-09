@@ -54,23 +54,28 @@ body {
   z-index: 1;
   pointer-events: none;
 }
+
 .content {
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
   z-index: 202;
 }
+
 .title {
   color: #ffffff;
   text-transform: uppercase;
   font-size: 83px;
   font-weight: 400;
+  padding: 0 20px 0;
 }
+
 .content h3 {
   font-size: 45px;
   color: #fff;
   font-weight: 300;
 }
+
 .describe {
   font-style: italic;
   font-size: 24px;
@@ -89,7 +94,7 @@ body {
   overflow-x: hidden !important;
 }
 .title-milions {
-  padding: 0 20px;
+  padding: 0 40px;
   font-size: 101px;
   color: #00a9ed;
   font-weight: 300;
@@ -97,6 +102,7 @@ body {
 .describe-millions {
   color: #00a9ed;
   padding: 0 20px;
+  text-transform: uppercase;
 }
 /* Cấu trúc chung cho box */
 .box-hover {
@@ -184,7 +190,7 @@ body {
   padding: 100px;
   margin-left: -10px;
 }
-.content-blue-right,
+
 .content-blue-left {
   padding-left: 120px;
 }
@@ -232,30 +238,52 @@ body {
   font-size: 20px !important;
   padding: 10px 40px;
   display: flex;
-  align-items: center; /* Căn giữa văn bản theo chiều dọc */
-  justify-content: center; /* Căn giữa văn bản theo chiều ngang */
+  align-items: center;
+  justify-content: center;
 }
 
 .btn-next-icon {
   background-color: #fff !important;
   border: none;
   display: flex;
-  align-items: center; /* Căn giữa biểu tượng theo chiều dọc */
-  justify-content: center; /* Căn giữa biểu tượng theo chiều ngang */
-  width: 60px; /* Chiều rộng cố định */
-  height: auto; /* Tự động khớp chiều cao */
+  align-items: center;
+  justify-content: center;
+  width: 70px;
+  height: auto;
   font-size: 58px;
   color: #00a9ed;
   padding: 0;
   margin: 0;
-  line-height: 1; /* Loại bỏ khoảng trắng không cần thiết */
+  line-height: 1;
 }
 
 .btn-next-icon p {
   font-weight: bold;
-  font-size: 58px; /* Kích thước biểu tượng */
-  color: #00a9ed; /* Màu xanh */
-  line-height: 1; /* Đảm bảo không có khoảng cách không cần thiết */
+  font-size: 58px;
+  color: #00a9ed;
+  line-height: 1;
+}
+
+.btn-next-icon:hover p {
+  animation: move 2s infinite ease;
+}
+
+.btn-join:hover + .btn-next-icon p {
+  animation: move 2s infinite ease;
+}
+
+@keyframes move {
+  0% {
+    transform: translateX(0);
+  }
+
+  50% {
+    transform: translateX(10px);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 /* Update the parent container to ensure no extra spacing */
@@ -278,7 +306,7 @@ body {
 .footer span {
   font-size: 14px;
   color: #fff;
-  font-weight: bold;
+  /* font-weight: bold; */
 }
 
 .reserved {
@@ -289,17 +317,6 @@ body {
   font-size: 14px;
   font-style: italic;
   color: #fff;
-}
-
-.title-content {
-  font-size: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
-  text-align: left;
-}
-
-.describe-content {
-  font-style: italic;
 }
 
 .section-content {
@@ -361,7 +378,7 @@ body {
   position: absolute;
   z-index: 100;
   left: -50px;
-  top: 55%;
+  top: 46.5%;
 }
 .box-blue-4 {
   position: absolute;
@@ -408,9 +425,10 @@ body {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%; /* Đảm bảo phủ toàn bộ banner-home */
-  z-index: 200; /* Đặt lớp phủ nằm trên các phần tử khác trong banner-home */
+  height: 100%;
+  z-index: 100;
 }
+
 .box-text {
   position: absolute;
   top: 80px;
@@ -458,6 +476,7 @@ body {
   position: relative;
   margin: 100px 0px;
 }
+
 .box-overlay-blue {
   width: 105px;
   height: 105px;
@@ -467,6 +486,17 @@ body {
   left: -4%;
   z-index: 100;
 }
+
+.box-overlay-right-blue {
+  width: 105px;
+  height: 105px;
+  background-color: rgba(0, 169, 237, 0.5);
+  position: absolute;
+  bottom: -6.6%;
+  right: -4%;
+  z-index: 100;
+}
+
 .box-overlay-content {
   width: 160px !important;
   height: 160px !important;
@@ -495,6 +525,20 @@ body {
   top: 61%;
   left: 24%;
   overflow: hidden;
+  letter-spacing: 5px;
+}
+
+.title-content {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: left;
+  letter-spacing: 2px;
+}
+
+.describe-content {
+  font-style: italic;
+  text-align: left;
 }
 
 .img-content img {
@@ -503,6 +547,16 @@ body {
   left: 20%;
   z-index: 2000;
 }
+
+.img-content-main img {
+  position: absolute;
+  width: 412px;
+  height: 459px;
+  top: 50%;
+  left: 15%;
+  z-index: 5000;
+}
+
 .img-luoi img {
   position: absolute;
   top: 0;
@@ -521,6 +575,11 @@ body {
   }
   .banner-content .bottom-text p {
     font-size: 14px;
+  }
+
+  .title-content br,
+  .describe-content br {
+    display: none;
   }
 }
 
@@ -619,8 +678,29 @@ body {
     font-size: 1.5rem;
   }
 
+  .banner-home h1.title-content-main {
+    font-size: 1.5rem;
+  }
+
   .banner-home .content .describe {
     font-size: 0.75rem;
+  }
+
+  .section-million .title-content {
+    font-size: 1.2rem;
+  }
+
+  .section-content {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .vision span {
+    font-size: 2rem;
+  }
+
+  .vision h2 {
+    font-size: 3.5rem;
   }
 }
 @media (max-width: 992px) {
@@ -726,6 +806,7 @@ body {
   .box-overlay,
   .box-text,
   .box-overlay-blue,
+  .box-overlay-right-blue,
   .box-over-light,
   .box-blue-parent,
   .box-children-2,

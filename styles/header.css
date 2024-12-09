@@ -16,6 +16,7 @@
   font-size: 12px;
   font-weight: bold;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .link a:hover {
@@ -36,10 +37,20 @@
   font-size: 16px;
   font-weight: 600;
   text-transform: uppercase;
+  display: inline-block;
 }
 
-.list-header ul li a:hover {
-  color: #00a9ed;
+.list-header ul li a::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s;
+}
+
+.list-header ul li a:hover::after {
+  width: 100%;
 }
 
 .navbar-toggler-icon {
