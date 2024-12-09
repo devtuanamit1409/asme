@@ -685,12 +685,22 @@ body {
     left: 7% !important;
     height: 350px;
     width: 22%;
-    top: 45%;
+    top: 51%;
   }
+
   .box-children-2 {
     left: 1%;
-    top: 52%;
+    top: 58%;
   }
+
+  .content {
+    top: 54%;
+  }
+
+  .box-text {
+    top: 112px;
+  }
+
   .box-children-3 {
     right: 8%;
   }
