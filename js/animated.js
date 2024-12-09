@@ -35,7 +35,7 @@ ScrollReveal().reveal(".top-animated", {
 function scrollTopButton() {
   const scrollButton = document.querySelector(".backToTopBtn");
   // 500 -> This is the value in px of the distance to be scrolled for the 'scroll-to-top' button to show up
-  if (window.scrollY > 500) {
+  if (window.scrollY > 600) {
     scrollButton.classList.add("active");
   } else {
     scrollButton.classList.remove("active");

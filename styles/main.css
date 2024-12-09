@@ -28,10 +28,10 @@ body {
 .backToTopBtn {
   position: fixed;
   bottom: 50px;
-  right: 50px;
+  right: 20px;
   z-index: 1000;
-  height: 50px;
-  width: 50px;
+  height: 40px;
+  width: 40px;
   font-size: 20px;
   border: none;
   color: #cccccc;
@@ -278,7 +278,7 @@ body {
 }
 
 .vision span {
-  font-size: 45px;
+  font-size: 2.813rem;
   color: #fff;
   font-family: "Cormorant SC", serif;
   font-weight: 500;
@@ -883,6 +883,17 @@ body {
     font-size: 50px;
   }
 }
+
+@media (max-width: 1270px) {
+  .vision h2 {
+    font-size: 4.375rem;
+  }
+
+  .vision br {
+    display: none;
+  }
+}
+
 @media (max-width: 1200px) {
   .box-overlay {
     display: none;
@@ -909,5 +920,35 @@ body {
     margin-right: 0;
     margin-bottom: 10px;
     padding: 50px;
+  }
+}
+
+@media (max-width: 1110px) {
+  .vision h2 {
+    font-size: 3.5rem;
+  }
+}
+
+@media (max-width: 940px) {
+  .vision h2 {
+    font-size: 3rem;
+  }
+
+  .vision span {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 842px) {
+  .vision h2 {
+    font-size: 2.5rem;
+  }
+
+  .vision span {
+    font-size: 2.2rem;
+  }
+
+  .vision p.vision-description {
+    font-size: 0.8rem;
   }
 }
